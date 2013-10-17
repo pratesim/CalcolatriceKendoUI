@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title></title>
         <meta charset="utf-8" />
         <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
         <link href="styles/main.css" rel="stylesheet" />
@@ -9,31 +8,30 @@
         <script src="cordova.js"></script>
         <script src="kendo/js/jquery.min.js"></script>
         <script src="kendo/js/kendo.mobile.min.js"></script>
-
         <script src="scripts/app.js"></script>
 
     </head>
     <body>
         <!--Home-->
         <div id="homeView" data-role="view" data-title="Home" data-layout="homeLayout">
-        	<input id="display" type="text" data-bind="readonly: isReadOnly, value: displayValue" style="width: 100%; margin-top: 5%;"/ >
-        	<div data-role="button" data-bind="events: {click: clickButton}" data-parameter="1">1</div>
-        	<div data-role="button" data-bind="events: {click: clickButton}" data-parameter="2">2</div>
-        	<div data-role="button" data-bind="events: {click: clickButton}" data-parameter="3">3</div>
-        	<div data-role="button" data-bind="events: {click: clickButton}" data-parameter="+">+</div>
-        	<div data-role="button" data-bind="events: {click: clickButton}" data-parameter="4">4</div>
-        	<div data-role="button" data-bind="events: {click: clickButton}" data-parameter="5">5</div>
-        	<div data-role="button" data-bind="events: {click: clickButton}" data-parameter="6">6</div>
-        	<div data-role="button" data-bind="events: {click: clickButton}" data-parameter="-">-</div>
-        	<div data-role="button" data-bind="events: {click: clickButton}" data-parameter="7">7</div>
-        	<div data-role="button" data-bind="events: {click: clickButton}" data-parameter="8">8</div>
-        	<div data-role="button" data-bind="events: {click: clickButton}" data-parameter="9">9</div>
-        	<div data-role="button" data-bind="events: {click: clickButton}" data-parameter="*">*</div>
-        	<div data-role="button" data-bind="events: {click: clickButton}" data-parameter="0">0</div>
-        	<div data-role="button" data-bind="events: {click: clickButton}" data-parameter=".">.</div>
-        	<div data-role="button" data-bind="events: {click: clickButton}" data-parameter="C">ON/C</div>
-        	<div data-role="button" data-bind="events: {click: clickButton}" data-parameter="/">/</div>
-        	<div data-role="button" data-bind="events: {click: clickButton}" data-parameter="=">=</div>
+        	<input id="display" type="text" readonly="true" style="width: 90%; margin-top: 5%; margin-left: 3%; margin-right: 3%; height: 10%"/ >
+        	<div class="numberButton" data-role="button" data-click=clickButton data-number="1">1</div>
+        	<div class="numberButton" data-role="button" data-click=clickButton data-number="2">2</div>
+        	<div class="numberButton" data-role="button" data-click=clickButton data-number="3">3</div>
+        	<div class="numberButton" data-role="button" data-click=clickButton data-number="+">+</div>
+        	<div class="numberButton" data-role="button" data-click=clickButton data-number="4">4</div>
+        	<div class="numberButton" data-role="button" data-click=clickButton data-number="5">5</div>
+        	<div class="numberButton" data-role="button" data-click=clickButton data-number="6">6</div>
+        	<div class="numberButton" data-role="button" data-click=clickButton data-number="-">-</div>
+        	<div class="numberButton" data-role="button" data-click=clickButton data-number="7">7</div>
+        	<div class="numberButton" data-role="button" data-click=clickButton data-number="8">8</div>
+        	<div class="numberButton" data-role="button" data-click=clickButton data-number="9">9</div>
+        	<div class="numberButton" data-role="button" data-click=clickButton data-number="*">*</div>
+        	<div class="numberButton" data-role="button" data-click=clickButton data-number="0">0</div>
+        	<div class="numberButton" data-role="button" data-click=clickButton data-number=".">.</div>
+        	<div class="numberButton" data-role="button" data-click=clickButton data-number="c">ON/C</div>
+        	<div class="numberButton" data-role="button" data-click=clickButton data-number="/">/</div>
+        	<div class="numberButton" data-role="button" data-click=clickButton data-number="=">=</div>
         </div>
         
         
@@ -51,20 +49,5 @@
         		</div>
         	</div>
         </div>
-        
-        <script>
-		    var viewModel = kendo.observable({
-		        isEnabled: true,
-		        isVisible: true,
-		        isReadOnly: true,
-		        displayValue: "0",
-		        clickButton: function(e){
-		        	var param = $(e.target).data('parameter');
-		        	this.set("displayValue", "tasto " + param + " premuto");
-		        },
-		    });
-		    kendo.bind($("#homeView"), viewModel);
-		    
-		</script>
     </body>
 </html>

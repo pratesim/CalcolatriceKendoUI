@@ -289,3 +289,11 @@ body, html {
         background-size:100%;
     }
 }
+
+/* stili per la homeview */
+.numberButton {
+	margin-top: 5%;
+	margin-left: 3%;
+	width: 17%;
+    height: 10%;
+}
