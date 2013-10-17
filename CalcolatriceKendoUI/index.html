@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+    	<title>Calcolatrice</title>
         <meta charset="utf-8" />
         <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
         <link href="styles/main.css" rel="stylesheet" />
@@ -13,41 +14,46 @@
     </head>
     <body>
         <!--Home-->
-        <div id="homeView" data-role="view" data-title="Home" data-layout="homeLayout">
-        	<div data-role="page" style="width: 100%; margin-left: 3%; margin-top: 5%;">
-        		<input id="display" type="text" readonly="true" ></input>
-	        	<div id="tastieraNumeri"> 
+        <div id="homeView" data-role="view" data-title="Home" data-layout="homeLayout" data-stretch="false" data-zoom="false">
+          <ul data-role="listview" data-style="inset">
+              <li>
+                  <label>
+                      <input id="display" type="text" />
+                  </label>
+              </li>
+          </ul>
+          <div id="tastieraNumeri"> 
 	        		<div class="rigaNumeri">
-		        		<div class="numberButton" data-role="button" data-click=clickButton data-number="1">1</div>
-		        		<div class="numberButton" data-role="button" data-click=clickButton data-number="2">2</div>
-		        		<div class="numberButton" data-role="button" data-click=clickButton data-number="3">3</div>
+						<div class="numberButton" data-role="button" data-click="clickButton" data-number="1">1</div>
+		        		<div class="numberButton" data-role="button" data-click="clickButton" data-number="2">2</div>
+		        		<div class="numberButton" data-role="button" data-click="clickButton" data-number="3">3</div>
 		        	</div>
 		        	<div class="rigaNumeri">
-		        		<div class="numberButton" data-role="button" data-click=clickButton data-number="4">4</div>
-		        		<div class="numberButton" data-role="button" data-click=clickButton data-number="5">5</div>
-		        		<div class="numberButton" data-role="button" data-click=clickButton data-number="6">6</div>
+		        		<div class="numberButton" data-role="button" data-click="clickButton" data-number="4">4</div>
+		        		<div class="numberButton" data-role="button" data-click="clickButton" data-number="5">5</div>
+		        		<div class="numberButton" data-role="button" data-click="clickButton" data-number="6">6</div>
 		        	</div>
 		        	<div class="rigaNumeri">
-		        		<div class="numberButton" data-role="button" data-click=clickButton data-number="7">7</div>
-			        	<div class="numberButton" data-role="button" data-click=clickButton data-number="8">8</div>
-			        	<div class="numberButton" data-role="button" data-click=clickButton data-number="9">9</div>
+		        		<div class="numberButton" data-role="button" data-click="clickButton" data-number="7">7</div>
+			        	<div class="numberButton" data-role="button" data-click="clickButton" data-number="8">8</div>
+			        	<div class="numberButton" data-role="button" data-click="clickButton" data-number="9">9</div>
 			        </div>
 		        	<div class="rigaNumeri">
-			        	<div class="numberButton" data-role="button" data-click=clickButton data-number="0">0</div>
-			        	<div class="numberButton" data-role="button" data-click=clickButton data-number=".">.</div>
-			        	<div class="numberButton" data-role="button" data-click=clickButton data-number="c">ON/C</div>
+			        	<div class="numberButton" data-role="button" data-click="clickButton" data-number="0">0</div>
+			        	<div class="numberButton" data-role="button" data-click="clickButton" data-number=".">.</div>
+			        	<div class="numberButton" data-role="button" data-click="clickButton" data-number="c">ON/C</div>
 			        </div>
 	        	</div>
-	        	<div id="tastieraOperazioni">
-	        		<div class="operationButton" data-role="button" data-click=clickButton data-number="+">+</div>
-	        		<div class="operationButton" data-role="button" data-click=clickButton data-number="-">-</div>
-	        		<div class="operationButton" data-role="button" data-click=clickButton data-number="*">*</div>
-	        		<div class="operationButton" data-role="button" data-click=clickButton data-number="/">/</div>
-	        		<div class="operationButton" data-role="button" data-click=clickButton data-number="=">=</div>
+
+          <div id="tastieraOperazioni">
+	        		<div class="operationButton" data-role="button" data-click="clickButton" data-number="+">+</div>
+	        		<div class="operationButton" data-role="button" data-click="clickButton" data-number="-">-</div>
+	        		<div class="operationButton" data-role="button" data-click="clickButton" data-number="*">*</div>
+	        		<div class="operationButton" data-role="button" data-click="clickButton" data-number="/">/</div>
+	        		<div class="operationButton" data-role="button" data-click="clickButton" data-number="=">=</div>
 	        	</div>	
 	        </div>
-        </div>
-        
+
         
         
         <!-- Layout -->
@@ -59,7 +65,7 @@
         	</div>
         	<div data-role="footer">
         		<div data-role="navbar">
-        			<span>Pratesim&copy</span>
+        			<span>Pratesim&copy;</span>
         		</div>
         	</div>
         </div>
