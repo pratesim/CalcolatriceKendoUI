@@ -38,141 +38,6 @@ body, html {
     margin:40px auto;
 }
 
-/* BUTTON STYLES*/
-.buttonArea {
-    text-align: center;
-}
-.login-button {
-    width:85%;
-    max-width:300px;
-    line-height:1.6em;
-}
-
-/* MAP STYLES*/
-#map-canvas {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right:0;
-}
-
-#map-search-wrap {
-    position: absolute;
-    z-index: 10;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding:3px;
-    box-sizing:border-box;
-    -webkit-box-sizing:border-box;
-}
-
-#map-address {
-    position:absolute;
-    left:0;
-    right:0;
-    margin:3px 50px 0px 50px;
-    background-color: #fff;
-    font-style: italic;
-    color: #000;
-    padding: 7px 10px;
-    border-radius: 3px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgb(180, 180, 180);
-    border-bottom-color: rgb(255, 255, 255);
-    box-shadow: 0 -1px 0 #3C3C3C;
-}
-
-#map-search {
-    float: right;
-    width: 40px;
-    height: 40px;
-    color:#fff;
-    border:none;
-    background:none;
-    background-image:url(../styles/images/search.png);
-    background-repeat:no-repeat;
-    background-position: center center;
-}
-#map-search:active {
-    background-image:url(../styles/images/search_active.png);
-    background-repeat:no-repeat;
-}
-
-#map-navigate-home {
-    float: left;
-    width: 40px;
-    height: 40px;
-    color:#fff;
-    border:none;
-    background:none;
-    background-image:url(../styles/images/location.png);
-    background-repeat:no-repeat;
-    background-position: center center;
-}
-#map-navigate-home:active{
-    background-image:url(../styles/images/location_active.png);
-    background-repeat:no-repeat;
-}
-
-/* WEATHER STYLES*/
-.weather h1 {
-    color:#fff;
-    font-size: 1.5em;
-    line-height:1.2em;
-    text-shadow: none;
-    padding:0.6em 1em;
-    margin: 0;
-    text-align:center;
-}
-.weather-info {
-    color:#fff;
-    font-size: 1.2em;
-    text-shadow: none;
-    line-height:1.8em;
-    display:inline-block;
-}
-.weather-info.date {
-    margin-top: 7px;
-}
-.weather-info.temperature {
-    margin-left:5px;
-}
-
-.weather-info.temperature.low{
-    color:rgba(0,0,0,0.5);
-}
-
-/* Weather Icons*/
-.weather-icon {
-    width:64px;
-    height:64px;
-    background-image:url(../styles/images/sprite-weather.png);
-    background-repeat:no-repeat;
-    float: right;
-    position: relative;
-    top: -6px;
-    left: -10px;
-}
-.weather-icon.sunny { background-position:0px 0px;}
-.weather-icon.cloudy { background-position:0px -64px;}
-.weather-icon.partly-cloudy { background-position:0px -128px;}
-.weather-icon.partly-sunny { background-position:0px -192px;}
-.weather-icon.shower { background-position:0px -256px;}
-.weather-icon.foggy { background-position:0px -320px;}
-.weather-icon.storm { background-position:0px -384px;}
-
-.position-left{
-    float:left;
-}
-.position-right {
-    float:right;
-}
-.position.center {
-    position:absolute;
-    margin:0 auto;
-    width:100%;
-}
 
 /* DEVICE SPECIFIC STYLES*/
 #skin-change{
@@ -251,49 +116,33 @@ body, html {
     opacity:0.3;
 }
 
-/* RETINA DISPLAY STYLES*/
-@media only screen and (-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi) {
-    .img {
-        background-image:url(../styles/images/icenium2x.png);
-        background-repeat:no-repeat;
-        background-size:100%;
-    }
-    .logo {
-        background-image:url(../styles/images/logo2x.png);
-        background-repeat:no-repeat;
-        background-size:100%;
-    }
-    #map-search {
-        background-image:url(../styles/images/search2x.png);
-        background-repeat:no-repeat;
-        background-size:100%;
-    }
-    #map-search:active {
-        background-image:url(../styles/images/search_active2x.png);
-        background-repeat:no-repeat;
-        background-size:100%;
-    }
-    #map-navigate-home {
-        background-image:url(../styles/images/location2x.png);
-        background-repeat:no-repeat;
-        background-size:100%;
-    }
-    #map-navigate-home:active {
-        background-image:url(../styles/images/location_active2x.png);
-        background-repeat:no-repeat;
-        background-size:100%;
-    }
-    .weather-icon {
-        background-image:url(../styles/images/sprite-weather2x.png);
-        background-repeat:no-repeat;
-        background-size:100%;
-    }
-}
-
 /* stili per la homeview */
 .numberButton {
-	margin-top: 5%;
-	margin-left: 3%;
-	width: 17%;
+	width: 15%;
     height: 10%;
+}
+
+.operationButton{
+	width: 100%;
+    height: 10%;
+}
+.rigaNumeri{
+	width: 100%;
+}
+#tastieraNumeri{
+	margin-top: 5%;
+	width: 70%; 
+	float:left;
+}
+#tastieraOperazioni{
+	margin-top: 5%;
+	width: 30%;
+	float: right;
+}
+#display{
+	width: 100%; 
+	height: 10%;
+}
+.km-button:not(.numberButton){
+	width: 60%;
 }
