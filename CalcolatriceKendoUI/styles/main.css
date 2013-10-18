@@ -130,13 +130,15 @@ body, html {
 	width: 100%;
 }
 #tastieraNumeri{
+    margin-left: 3%;
 	margin-top: 5%;
 	width: 70%; 
 	float:left;
 }
 #tastieraOperazioni{
 	margin-top: 5%;
-	width: 30%;
+    margin-right: 4%;
+	width: 20%;
 	float: right;
 }
 #display{

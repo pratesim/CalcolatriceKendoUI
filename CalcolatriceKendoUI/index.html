@@ -14,15 +14,16 @@
     </head>
     <body>
         <!--Home-->
-        <div id="homeView" data-role="view" data-title="Home" data-layout="homeLayout" data-stretch="false" data-zoom="false">
-          <ul data-role="listview" data-style="inset">
-              <li>
-                  <label>
-                      <input id="display" type="text" />
-                  </label>
-              </li>
-          </ul>
-          <div id="tastieraNumeri"> 
+        <div id="homeView" data-role="view" data-title="Home" data-layout="homeLayout">
+ 			
+          	<ul data-role="listview" data-style="inset">
+               <li>
+                   <label>Label
+                       <input id="display" type="text" value="Text" />
+                   </label>
+               </li>
+           </ul>
+           <div id="tastieraNumeri"> 
 	        		<div class="rigaNumeri">
 						<div class="numberButton" data-role="button" data-click="clickButton" data-number="1">1</div>
 		        		<div class="numberButton" data-role="button" data-click="clickButton" data-number="2">2</div>
@@ -43,17 +44,17 @@
 			        	<div class="numberButton" data-role="button" data-click="clickButton" data-number=".">.</div>
 			        	<div class="numberButton" data-role="button" data-click="clickButton" data-number="c">ON/C</div>
 			        </div>
-	        	</div>
+	        </div>
 
-          <div id="tastieraOperazioni">
+          	<div id="tastieraOperazioni">
 	        		<div class="operationButton" data-role="button" data-click="clickButton" data-number="+">+</div>
 	        		<div class="operationButton" data-role="button" data-click="clickButton" data-number="-">-</div>
 	        		<div class="operationButton" data-role="button" data-click="clickButton" data-number="*">*</div>
 	        		<div class="operationButton" data-role="button" data-click="clickButton" data-number="/">/</div>
 	        		<div class="operationButton" data-role="button" data-click="clickButton" data-number="=">=</div>
-	        	</div>	
 	        </div>
-
+	    </div>
+		
         
         
         <!-- Layout -->
